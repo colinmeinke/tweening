@@ -34,6 +34,8 @@
     "semantic-release": "^4.3.5"
   },
   "keywords": [
+    "animate",
+    "engine",
     "tween",
     "generator"
   ],
