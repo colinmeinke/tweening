@@ -31,8 +31,6 @@
     "babel-preset-es2015": "^6.5.0",
     "commitizen": "^2.5.0",
     "cz-conventional-changelog": "^1.1.5",
-    "expect": "^1.14.0",
-    "mocha": "^2.4.5",
     "semantic-release": "^4.3.5"
   },
   "keywords": [
