@@ -1,6 +1,6 @@
 import match from './match';
 
-const tweenGenerator = function* ({ duration, easing, from, to }) {
+function* tweenGenerator({ duration, easing, from, to }) {
   const start = Date.now();
   let time = 0;
 
