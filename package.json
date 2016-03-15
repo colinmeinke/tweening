@@ -23,7 +23,7 @@
   "dependencies": {
     "tween-functions": "^1.2.0"
   },
-  "description": "A little tweening library. 1.9kb gzipped",
+  "description": "A little tweening library",
   "devDependencies": {
     "babel-cli": "^6.5.1",
     "babel-core": "^6.5.2",

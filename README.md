@@ -1,11 +1,13 @@
 # Tweening
 
-A little tweening library. 1.9kb gzipped.
+A little tweening library.
+
+**1.9kb gzipped.**
 
 However, you're currently also going to have to bring
-babel polyfill to the party at an additional 30.8kb gzipped.
-This is to support Javascript generators which this library
-makes use of.
+[babel polyfill](https://cdnjs.com/libraries/babel-polyfill)
+to the party at an additional 30.8kb gzipped. This is to
+support Javascript generators which this library makes use of.
 
 ## Installation
 
