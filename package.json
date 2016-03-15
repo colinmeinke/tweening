@@ -23,15 +23,18 @@
   "dependencies": {
     "tween-functions": "^1.2.0"
   },
-  "description": "A little tweening library",
+  "description": "A little tweening library. 1.9kb gzipped",
   "devDependencies": {
     "babel-cli": "^6.5.1",
     "babel-core": "^6.5.2",
+    "babel-loader": "^6.2.4",
     "babel-plugin-transform-object-rest-spread": "^6.5.0",
     "babel-preset-es2015": "^6.5.0",
     "commitizen": "^2.5.0",
     "cz-conventional-changelog": "^1.1.5",
-    "semantic-release": "^4.3.5"
+    "rimraf": "^2.5.2",
+    "semantic-release": "^4.3.5",
+    "webpack": "^1.12.14"
   },
   "keywords": [
     "animate",
@@ -47,9 +50,14 @@
     "url": "https://github.com/colinmeinke/tweening.git"
   },
   "scripts": {
+    "clean": "rimraf lib dist",
     "commit": "git-cz",
-    "build": "babel src --out-dir lib",
-    "prepublish": "npm run build",
+    "build": "npm run build:lib && npm run build:umd",
+    "build:lib": "babel src --out-dir lib",
+    "build:umd": "npm run build:umd:dev && npm run build:umd:pro",
+    "build:umd:dev": "webpack ./src/index.js ./dist/tweening.js --output-library Tweening --output-library-target umd --config ./webpack.config.babel.js",
+    "build:umd:pro": "webpack -p ./src/index.js ./dist/tweening.min.js --output-library Tweening --output-library-target umd --config ./webpack.config.babel.js",
+    "prepublish": "npm run clean && npm run build",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "version": "0.0.0-semantically-released"

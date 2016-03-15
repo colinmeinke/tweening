@@ -1,13 +1,11 @@
 # Tweening
 
-A little tweening library.
+A little tweening library. 1.9kb gzipped.
 
-I thought it would be fun to create a tweening library based
-around a Javascript generator.
-
-You're going to have to bring your own generator polyfill to
-the party if you wish to
-[support all browsers](http://kangax.github.io/compat-table/es6/#test-generators).
+However, you're currently also going to have to bring
+babel polyfill to the party at an additional 30.8kb gzipped.
+This is to support Javascript generators which this library
+makes use of.
 
 ## Installation
 
