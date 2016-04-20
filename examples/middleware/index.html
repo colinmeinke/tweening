@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <svg id="svg" width="500" height="500" viewBox="0 0 500 500">
+    </svg>
+    <script src="./node_modules/babel-polyfill/dist/polyfill.min.js"></script>
+    <script src="../../dist/tweening.min.js"></script>
+    <script src="./node_modules/tweening-color-middleware/dist/tweening-color-middleware.min.js"></script>
+    <script>
+      const tween = Tweening.default;
+      const colorMiddleware = TweeningColorMiddleware.default;
+
+      const from = { cx: 20, cy: 20, r: 20, fill: '#000' };
+
+      const svg = document.getElementById( 'svg' );
+      const circle = document.createElementNS( 'http://www.w3.org/2000/svg', 'circle' );
+
+      for ( k in from ) {
+        circle.setAttribute( k, from[ k ]);
+      }
+
+      svg.appendChild( circle );
+
+      tween({
+        duration: 5000,
+        from,
+        to: { cx: 450, cy: 450, r: 50, fill: '#F0F0F0' },
+        middleware: [ colorMiddleware ],
+        next: v => {
+          for ( k in v ) {
+            circle.setAttribute( k, v[ k ]);
+          }
+        },
+        complete: () => console.log( 'all done' ),
+      });
+    </script>
+  </body>
+</html>
