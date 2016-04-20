@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <h1 id="counter"></h1>
+  <body>
+    <script src="./node_modules/babel-polyfill/dist/polyfill.min.js"></script>
+    <script src="../../dist/tweening.min.js"></script>
+    <script>
+      const tween = Tweening.default;
+      const from = 1;
+      const counter = document.getElementById( 'counter' );
+
+      counter.innerHTML = from;
+
+      tween({
+        duration: 5000,
+        from,
+        to: 1000,
+        next: value => counter.innerHTML = value,
+        complete: () => console.log( 'all done' ),
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "author": {
+    "name": "Colin Meinke",
+    "email": "hello@colinmeinke.com",
+    "url": "www.colinmeinke.com"
+  },
+  "bugs": {
+    "url": "https://github.com/colinmeinke/tweening/issues"
+  },
+  "description": "Tweening counter example",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colinmeinke/tweening.git"
+  },
+  "version": "0.0.0-semantically-released",
+  "dependencies": {
+    "babel-polyfill": "^6.7.4",
+    "tweening-color-middleware": "^1.0.0"
+  }
+}
