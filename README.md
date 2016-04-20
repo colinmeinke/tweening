@@ -2,7 +2,7 @@
 
 A little tweening library.
 
-**1.9kb gzipped.**
+**2.2kb gzipped.**
 
 However, you're currently also going to have to bring
 [babel polyfill](https://cdnjs.com/libraries/babel-polyfill)
