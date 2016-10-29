@@ -15,7 +15,7 @@
   },
   "version": "0.0.0-semantically-released",
   "dependencies": {
-    "babel-polyfill": "^6.7.4",
-    "tweening-color-middleware": "^1.0.0"
+    "babel-polyfill": "^6.16.0",
+    "tweening-color-middleware": "^1.2.0"
   }
 }
