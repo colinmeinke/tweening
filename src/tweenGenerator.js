@@ -1,15 +1,15 @@
-import match from './match';
+import match from './match'
 
 const tweenGenerator = function* ({ duration, easing, from, to }) {
-  const start = Date.now();
+  const start = Date.now()
 
-  while ( Date.now() - start < duration ) {
-    const time = Date.now() - start;
+  while (Date.now() - start < duration) {
+    const time = Date.now() - start
 
-    yield match( from, to, ( a, b ) => {
-      return easing.call( null, time, a, b, duration );
-    });
+    yield match(from, to, (a, b) => {
+      return easing(time, a, b, duration)
+    })
   }
-};
+}
 
-export default tweenGenerator;
+export default tweenGenerator

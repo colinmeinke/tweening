@@ -34,6 +34,8 @@
     "cz-conventional-changelog": "^1.2.0",
     "rimraf": "^2.5.4",
     "semantic-release": "^4.3.5",
+    "snazzy": "^5.0.0",
+    "standard": "^8.5.0",
     "webpack": "^1.13.3"
   },
   "keywords": [
@@ -57,6 +59,8 @@
     "build:umd:pro": "webpack -p ./src/index.js ./dist/tweening.min.js --output-library Tweening --output-library-target umd --config ./webpack.config.babel.js",
     "clean": "rimraf lib dist",
     "commit": "git-cz",
+    "fix": "standard --fix",
+    "lint": "standard --verbose | snazzy", 
     "prepublish": "npm run clean && npm run build",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },

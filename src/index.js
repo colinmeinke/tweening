@@ -1,3 +1,3 @@
-import tween from './tween';
+import tween from './tween'
 
-export default tween;
+export default tween
