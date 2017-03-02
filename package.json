@@ -2,7 +2,7 @@
   "author": {
     "name": "Colin Meinke",
     "email": "hello@colinmeinke.com",
-    "url": "www.colinmeinke.com"
+    "url": "https://colinmeinke.com"
   },
   "babel": {
     "plugins": [
@@ -60,7 +60,7 @@
     "clean": "rimraf lib dist",
     "commit": "git-cz",
     "fix": "standard --fix",
-    "lint": "standard --verbose | snazzy", 
+    "lint": "standard --verbose | snazzy",
     "prepublish": "npm run clean && npm run build",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
